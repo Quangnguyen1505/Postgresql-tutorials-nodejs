@@ -6,7 +6,7 @@ const compression = require('compression')
 
 //init dbs 
 // const connect = require('./v1/databases/init.postgresql');
-const initPostgresql = require('./v2/databases/init.postgresql');
+const initPostgresql = require('./v3/databases/init.postgresql');
 initPostgresql.initPostgresql();
 
 //user middleware
@@ -22,7 +22,7 @@ app.use(express.urlencoded({
 }))
 
 //router
-app.use(require('./v2/routes/index.router'))
+// app.use(require('./v3/routes/index.router'))
 // Error Handling Middleware called
 
 app.use((req, res, next) => {
